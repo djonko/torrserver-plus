@@ -2,7 +2,7 @@
 # TorrServer with qBittorrent
 #
 
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 ENV TS_GIT_URL="https://api.github.com/repos/YouROK/TorrServer/releases"
 ENV TS_HOME_URL="https://releases.yourok.ru/torr/server_release.json"
