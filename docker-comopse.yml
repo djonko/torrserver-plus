@@ -1,0 +1,17 @@
+version: "3"
+services:
+  torrserverplus:
+    build:
+      context: .
+    container_name: "torrserverplus"
+    restart: unless-stopped
+    environment:
+      TZ: "America/Montreal"
+      UPDATE_TASK: "0 9 * * *"
+
+    volumes:
+      - "./local/db:/TS/db"
+      - "./local/downloads:/TS/db/torrents"
+    ports:
+      - "8090:8090"
+      - "8888:8888"
